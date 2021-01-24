@@ -7,7 +7,6 @@ import (
 	"html/template"
 	"log"
 	"net/url"
-	"time"
 
 	"github.com/conku/admin"
 	"github.com/conku/media/media_library"
@@ -45,9 +44,9 @@ type QorSEOSetting struct {
 	Setting     Setting
 	IsGlobalSEO bool
 
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt *time.Time `gorm:"index"`
+	CreatedAt int64
+	UpdatedAt int64
+	DeletedAt *int64 `gorm:"index"`
 
 	collection *Collection
 }
